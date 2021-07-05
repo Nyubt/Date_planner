@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DateplannerApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(DateplannerApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(DateplannerApplication.class, args);
+    }
 
 }

@@ -14,7 +14,7 @@
 	<name>dateplanner</name>
 	<description>Date planner app</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>${java.version}</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
