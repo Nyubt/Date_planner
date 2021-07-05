@@ -11,8 +11,11 @@ public class Product implements Serializable {
     private Long id;
     @Column(nullable = false, updatable = false)
     private Long userId;
+    @Column(nullable = false)
     private String title;
+    @Column(nullable = false)
     private String description;
+    @Column(nullable = false)
     private Float price;
 
     public Product() {
