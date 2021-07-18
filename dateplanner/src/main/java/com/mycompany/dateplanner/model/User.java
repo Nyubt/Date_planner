@@ -1,5 +1,8 @@
 package com.mycompany.dateplanner.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import org.hibernate.annotations.Type;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -9,16 +12,22 @@ public class User implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, updatable = false)
     private Long id;
+    @Column(nullable = false)
     private String name;
+    @Column(nullable = false)
     private String email;
+    @Column(nullable = false)
     private String password;
-    private Boolean isSeller;
+    @Column(nullable = false, columnDefinition = "TINYINT(1)")
+    @Type(type = "org.hibernate.type.NumericBooleanType")
+    @JsonProperty("isSeller")
+    private boolean isSeller;
     private String imageUrl;
 
     public User() {
     }
 
-    public User(String name, String email, String password, Boolean isSeller, String imageUrl) {
+    public User(String name, String email, String password, boolean isSeller, String imageUrl) {
         this.name = name;
         this.email = email;
         this.password = password;
@@ -66,12 +75,12 @@ public class User implements Serializable {
         this.imageUrl = imageUrl;
     }
 
-    public Boolean getIsSeller() {
+    public boolean getSeller() {
         return isSeller;
     }
 
-    public void setIsSeller(Boolean seller) {
-        this.isSeller = seller;
+    public void setSeller(boolean isSeller) {
+        this.isSeller = isSeller;
     }
 
     @Override
