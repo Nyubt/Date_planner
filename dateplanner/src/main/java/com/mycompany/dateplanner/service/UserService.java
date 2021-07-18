@@ -5,6 +5,7 @@ import com.mycompany.dateplanner.model.User;
 import com.mycompany.dateplanner.repo.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -25,6 +26,7 @@ public class UserService {
         return userRepo.save(user);
     }
 
+    @Transactional
     public void deleteUser(Long id) {
         userRepo.deleteUserById(id);
     }
