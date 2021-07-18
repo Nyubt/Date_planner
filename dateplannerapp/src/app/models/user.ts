@@ -1,8 +1,8 @@
 export interface User {
-id: number;
-name: string;
-email: string;
-password: string;
-isSeller: boolean;
-imageUrl: string;
+  id: number;
+  name: string;
+  email: string;
+  password: string;
+  isSeller: boolean;
+  imageUrl: string;
 }

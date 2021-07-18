@@ -66,11 +66,11 @@ public class User implements Serializable {
         this.imageUrl = imageUrl;
     }
 
-    public Boolean getSeller() {
+    public Boolean getIsSeller() {
         return isSeller;
     }
 
-    public void setSeller(Boolean seller) {
+    public void setIsSeller(Boolean seller) {
         this.isSeller = seller;
     }
 
