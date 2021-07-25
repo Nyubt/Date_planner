@@ -1,0 +1,31 @@
+<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+  <div class="carousel-inner">
+
+    <div *ngFor='let item of carouselItems; first as isFirst'[ngClass]="isFirst ? 'carousel-item active' : 'carousel-item' ">
+      <img src="{{ item.image }}" class="w-100 h-50">
+      <div class="carousel-caption">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-8 bg-custom d-none d-sm-block py-3 px-0">
+              <h1>{{ item.name }}</h1>
+              <div class="border-top border-primary w-50 mx-auto my-3"></div>
+              <h6 class="pb-3">{{ item.text }}</h6>
+              <a href="{{ item.link }}" class="btn btn-primary btn-lg">Visit Page</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <a href="#carousel" class="carousel-control-prev" role="button" data-slide="prev">
+    <span class="fas fa-chevron-left fa-2x"></span>
+  </a>
+
+  <a href="#carousel" class="carousel-control-next" role="button" data-slide="next">
+    <span class="fas fa-chevron-right fa-2x"></span>
+  </a>
+</div>
+
+
