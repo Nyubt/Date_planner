@@ -29,6 +29,12 @@ public class UserResource {
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
 
+    @GetMapping("/findbyemail/{email}")
+    public ResponseEntity<User> getUserByEmail(@PathVariable("email") String email){
+        User user = userService.findUserByEmail(email);
+        return new ResponseEntity<>(user, HttpStatus.OK);
+    }
+
     @PostMapping("/add")
     public ResponseEntity<User> addUser(@RequestBody User user){
         User newUser = userService.addUser(user);

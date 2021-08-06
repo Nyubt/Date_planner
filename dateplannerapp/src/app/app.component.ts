@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpInterceptor, HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 @Component({
@@ -8,7 +7,9 @@ import { HttpInterceptor, HttpClient, HttpErrorResponse } from '@angular/common/
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  ngOnInit(): void{ }
+  ngOnInit(): void{
+    //sessionStorage.removeItem('username');
+  }
 
   constructor(){}
 

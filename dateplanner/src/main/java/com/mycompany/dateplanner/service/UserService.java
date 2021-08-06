@@ -39,4 +39,9 @@ public class UserService {
         return userRepo.findUserById(id)
                 .orElseThrow(() -> new RecordNotFoundException("User by id " + id + " not found"));
     }
+
+    public User findUserByEmail(String email) {
+        return userRepo.findUserByEmail(email)
+                .orElseThrow(() -> new RecordNotFoundException("User by name " + email + " not found"));
+    }
 }

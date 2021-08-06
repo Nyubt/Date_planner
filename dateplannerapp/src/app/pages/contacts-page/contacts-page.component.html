@@ -5,11 +5,15 @@
           aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggle-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarColor02">
+  <div *ngIf="loginService.isUserLoggedIn()" class="collapse navbar-collapse" id="navbarColor02">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" (click)="onOpenModal(null, 'add')">Add User <span class="sr-only">(current)</span></a>
+        <a class="nav-link" (click)="onOpenModal(null, 'add')">Add User
+          <span class="sr-only">(current)</span></a>
       </li>
+      <button (click)=logout() class="btn btn-success">
+        Logout
+      </button>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input type="search" (ngModelChange)="searchUsers(key.value)" #key="ngModel" ngModel
@@ -17,6 +21,8 @@
     </form>
   </div>
 </nav>
+<!--<app-login></app-login>-->
+
 
 <div class="container" id="main-container">
   <div class="row">
@@ -36,7 +42,7 @@
           <li class="list-group-item"><i class="fa fa-phone float-right"></i>Has seller rights : {{ user?.isSeller }}</li>
           <li class="list-group-item">Has seller rights : <input type="checkbox" [checked]="!!user?.isSeller" onclick="return false" /></li>
         </ul>
-        <div class="card-body">
+        <div *ngIf="loginService.isUserLoggedIn()" class="card-body">
           <div class="float-right btn-group btn-group-sm">
             <a (click)="onOpenModal(user, 'edit')" href="#" class="btn btn-primary tooltips" data-placement="top"
                data-original-title="Edit"><i class="fas fa-edit"></i> </a>

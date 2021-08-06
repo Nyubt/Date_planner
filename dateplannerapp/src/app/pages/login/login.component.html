@@ -1,0 +1,22 @@
+<div class="container">
+    <form [formGroup]="contactForm">
+    <div class="form-group">
+      <label for="email">Email : </label>
+      <input type="text"
+             formControlName="email"
+             id="email"
+             required>
+      <label for="password">Password : </label>
+      <input type="text"
+             formControlName="password"
+             id="password"
+             required>
+    </div>
+    </form>
+  <button (click)=checkLogin() class="btn btn-success">
+    Login
+  </button>
+  <div *ngIf="validLogin">
+    <p>In!</p>
+  </div>
+</div>

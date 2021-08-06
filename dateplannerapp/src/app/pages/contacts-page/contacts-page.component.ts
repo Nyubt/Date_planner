@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { User } from '../../models/user';
 import { UserService } from '../../services/user.service';
 import { HttpInterceptor, HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { AuthenticationService } from '../../services/authentication.service';
 
 @Component({
   selector: 'app-contacts-page',
@@ -16,7 +17,8 @@ export class ContactsPageComponent implements OnInit {
   public editUser!: User | null;
   public deleteUser!: User | null;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService,
+  public loginService : AuthenticationService) { }
 
   ngOnInit() {
     this.getUsers();
@@ -114,4 +116,8 @@ export class ContactsPageComponent implements OnInit {
       }
       button.click();
     }
+
+  public logout() {
+    this.loginService.logOut(); 
+  }
 }
