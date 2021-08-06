@@ -2,6 +2,7 @@ package com.mycompany.dateplanner.service;
 
 import com.mycompany.dateplanner.exception.RecordNotFoundException;
 import com.mycompany.dateplanner.model.Product;
+import com.mycompany.dateplanner.model.User;
 import com.mycompany.dateplanner.repo.ProductRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

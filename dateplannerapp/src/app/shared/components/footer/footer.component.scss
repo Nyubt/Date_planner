@@ -1,0 +1,34 @@
+footer {
+  background-color: #383838;
+  padding: 1rem 2rem 3rem;
+}
+
+img {
+  height: 3.5rem;
+  margin: 1.5rem auto;
+}
+
+p, a {
+  color: white;
+  text-decoration: none;
+}
+
+ul.social {
+  list-style-type: none;
+  display: flex;
+  max-width: 16rem;
+  margin: 0 auto;
+  padding: 0;
+}
+
+ul.social li {
+  margin: 0 auto;
+}
+
+.fab, .far {
+  font-size: 2.3rem;
+}
+
+.fab:hover, .far:hover {
+  color: #68a0d2;
+}

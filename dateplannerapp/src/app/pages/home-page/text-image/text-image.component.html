@@ -1,0 +1,19 @@
+<div class="w-50 mx-auto my-3"></div>
+
+<section [ngClass]="{ right: position === 'right', left: position === 'left' }" class='container blue-bg'>
+  <div class='text-container col-md-6 px-2'>
+    <p class='heading'>{{ title }}</p>
+    <app-title-bar></app-title-bar>
+    <p class='large-text'>{{ text }}</p>
+    <a [href]='link' class="btn btn-outline-dark btn-md">Check it out!</a>
+  </div>
+
+  <div class="w-50 mx-auto my-3"></div>
+
+  <div class='col-md-6 px-2'>
+    <img [src]='image' alt='' />
+  </div>
+
+</section>
+
+<div class="w-50 mx-auto my-3"></div>

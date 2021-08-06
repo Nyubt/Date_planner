@@ -1,0 +1,21 @@
+<nav class="navbar bg-light navbar-light navbar-expand-lg">
+  <div class="container">
+
+    <a href="index.html" class="navbar-brand">
+      <img src="https://theyesgirls.com/wp-content/uploads/2019/06/logo@2x.png">
+    </a>
+
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class='nav-item' *ngFor='let item of menuItems; let i = index'>
+          <a href="{{ item.link }}" class="nav-link">{{ item.name }}</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
