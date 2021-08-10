@@ -11,7 +11,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class LoginComponent implements OnInit {
 
   contactForm: FormGroup;
-  public validLogin = false
+  public validLogin: boolean = false
 
   constructor(private router: Router,
   private loginService: AuthenticationService) { }
@@ -28,12 +28,27 @@ export class LoginComponent implements OnInit {
   }
 
   public checkLogin() {
-    console.log(this.contactForm.value);
-    if (this.loginService.authenticate(this.contactForm.value.email, this.contactForm.value.password)) {
-      this.router.navigate(['contacts']);
+    //console.log(this.contactForm.value);
+    this.loginService.authenticate(this.contactForm.value.email, this.contactForm.value.password)
+    .subscribe((response: boolean) => {
+        this.validLogin = response;
+        console.log(response);
+        if (response == true){
+          this.router.navigate(['']);
+          console.log("fail");
+        }
+      },
+      (error) => {
+        alert(error);
+      }
+    );
+    //console.log(this.validLogin);
+    /*if (this.loginService.authenticate(this.contactForm.value.email, this.contactForm.value.password)) {
+      console.log("Logged in!");
+      this.router.navigate(['']);
       this.validLogin = true;
     } else {
       this.validLogin = false;
-    }
+    }*/
   }
 }

@@ -1,5 +1,33 @@
-<div class="container">
-    <form [formGroup]="contactForm">
+<div class="local-container">
+  <div class="card login-form">
+    <div class="card-body">
+      <h1 class="card-title text-center">LOGIN</h1>
+      <div class="card-text">
+        <form [formGroup]="contactForm">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" formControlName="email" class="form-control form-control-sm" id="email" required/>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <a href="#" class="forgotten-password">
+              Forgot Password?
+            </a>
+            <input type="password" formControlName="password" class="form-control form-control-sm" id="password" required/>
+          </div>
+          <button (click)=checkLogin() type="submit" class="btn btn-primary btn-block">
+            Sign In
+          </button>
+          <div class="signup">
+            Don't have an account? <a routerLink="/registration-form" >Register here</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!--    <form [formGroup]="contactForm">
     <div class="form-group">
       <label for="email">Email : </label>
       <input type="text"
@@ -18,5 +46,4 @@
   </button>
   <div *ngIf="validLogin">
     <p>In!</p>
-  </div>
-</div>
+  </div>-->

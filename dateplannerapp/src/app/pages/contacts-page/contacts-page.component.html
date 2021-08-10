@@ -11,9 +11,6 @@
         <a class="nav-link" (click)="onOpenModal(null, 'add')">Add User
           <span class="sr-only">(current)</span></a>
       </li>
-      <button (click)=logout() class="btn btn-success">
-        Logout
-      </button>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input type="search" (ngModelChange)="searchUsers(key.value)" #key="ngModel" ngModel
@@ -21,8 +18,6 @@
     </form>
   </div>
 </nav>
-<!--<app-login></app-login>-->
-
 
 <div class="container" id="main-container">
   <div class="row">

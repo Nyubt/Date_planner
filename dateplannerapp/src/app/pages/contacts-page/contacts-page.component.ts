@@ -116,8 +116,4 @@ export class ContactsPageComponent implements OnInit {
       }
       button.click();
     }
-
-  public logout() {
-    this.loginService.logOut(); 
-  }
 }
