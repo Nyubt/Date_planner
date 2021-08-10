@@ -1,0 +1,59 @@
+.navbar-brand img{
+  height: 3rem;
+}
+
+.navbar {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .1);
+  z-index: 1;
+}
+
+.nav-item {
+  padding: .5rem;
+}
+
+.nav-link {
+ color: #5b5555!important;
+}
+.nav-link.active,
+.nav-link:hover {
+ color: #4981b3!important;
+}
+
+/*.site-header {
+    text-align: center;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    position: relative;
+}
+
+article, nav, section {
+    display: block;
+}
+
+.menu{
+  display: flex;
+  align-items: center;
+}
+
+.menu-item {
+    display: inline-block;
+}
+
+.menu-item-home {
+    background-image: url(https://theyesgirls.com/wp-content/uploads/2019/05/logo2@2x.png);
+    background-repeat: no-repeat;
+    background-size: 380px;
+    width: 380px;
+    height: 65px;
+}
+
+.home-logo {
+    background-image: url(https://theyesgirls.com/wp-content/uploads/2019/06/logo@2x.png);
+    background-size: 100px;
+    width: 100px;
+    height: 78px;
+}*/

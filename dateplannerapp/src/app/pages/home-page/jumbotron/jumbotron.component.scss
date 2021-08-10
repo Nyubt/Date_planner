@@ -1,0 +1,17 @@
+.btn-primary {
+  background-color: #4981b3;
+  border: .1rem solid  #4981b3;
+}
+
+.btn-lg {
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 1rem;
+  border-width: medium;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #68a0d2;
+  border: .1rem solid  #68a0d2;
+}

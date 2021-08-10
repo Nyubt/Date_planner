@@ -1,16 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpInterceptor, HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  ngOnInit(): void{
-    //sessionStorage.removeItem('username');
-  }
-
-  constructor(){}
-
+export class AppComponent {
+  title = 'dateplannerapp';
 }

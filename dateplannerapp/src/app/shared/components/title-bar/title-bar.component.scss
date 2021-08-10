@@ -1,0 +1,20 @@
+.bar:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 5px;
+  background: #fff;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: W-PART;
+}
+
+.bar {
+  height: 4px;
+  width: 85px;
+  background: #4981b3;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
