@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IMenuItem } from '../../../models/menu-item';
 import { MenuItemService } from '../../../services/menu-item.service';
+import { AuthenticationService } from '../../../services/authentication.service';
 
 @Component({
   selector: 'app-menu',
@@ -27,16 +28,11 @@ export class MenuComponent implements OnInit {
       type: 'AA',
       link: 'index.html',
       logoName: 'home'
-    },
-    {
-     name: 'Log In',
-     type: 'AA',
-     link: 'index.html',
-     logoName: 'home'
     }
   ];
 
-  constructor(private menuItemService: MenuItemService) {
+  constructor(private menuItemService: MenuItemService,
+  public loginService : AuthenticationService) {
   }
 
   ngOnInit(): void {
@@ -45,4 +41,7 @@ export class MenuComponent implements OnInit {
     });
   }
 
+  public logout() {
+    this.loginService.logOut();
+  }
 }
